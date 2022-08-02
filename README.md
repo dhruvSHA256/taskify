@@ -1,9 +1,11 @@
 # Taskify
 
 ![React.js](https://img.shields.io/badge/react-%2332C3CD.svg?style=for-the-badge&logo=react&logoColor=white)
+![ES6](https://img.shields.io/badge/ES6-%23F5DA55.svg?style=for-the-badge&logo=javascript&logoColor=black)
 
-![demo](media/demo.png)
+![statisdemo](media/demo.png)
 
+- <a href="https://aqueous-falls-72397.herokuapp.com/" target="_blank">check out the live demo ;)</a>
 - using [React.js](reactjs.org)
 - add, delete, edit todos
 - mark completed todos 
