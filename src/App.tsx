@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import InputField from "./components/InputField";
 import TodoList from "./components/TodoList";
@@ -9,6 +9,18 @@ const App: React.FC = () => {
     const [todo, setTodo] = useState<string>("");
     const [todos, setTodos] = useState<Todo[]>([]);
     const [completedTodos, setCompletedTodos] = useState<Todo[]>([]);
+
+    // load todos and completed todos from localstorage
+    useEffect(() => {
+        setTodos(JSON.parse(localStorage.getItem("todos") || '{[]}'));
+        setCompletedTodos(JSON.parse(localStorage.getItem("completedTodos") || '{[]}'));
+    }, []);
+
+    // save todos and completed todos to localstorage everytime they are changed
+    useEffect(() => {
+        localStorage.setItem("todos", JSON.stringify(todos));
+        localStorage.setItem("completedTodos", JSON.stringify(completedTodos));
+    }, [todos, completedTodos]);
 
     const handleAdd = (e: React.FormEvent): void => {
         e.preventDefault();
@@ -25,8 +37,7 @@ const App: React.FC = () => {
         let todo: Todo;
         if (source.droppableId === "incompleteTodos") {
             todo = todos[source.index];
-        }
-        else {
+        } else {
             todo = completedTodos[source.index];
         }
         if (todo.isDone) {
@@ -41,7 +52,7 @@ const App: React.FC = () => {
         todo.isDone = !todo.isDone;
         // console.log(todos);
         // console.log(completedTodos);
-    }
+    };
 
     return (
         <DragDropContext onDragEnd={onDragEnd}>
