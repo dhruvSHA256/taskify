@@ -1,6 +1,7 @@
 # Taskify
 
 ![React.js](https://img.shields.io/badge/react-%2332C3CD.svg?style=for-the-badge&logo=react&logoColor=white)
+![TS](https://img.shields.io/badge/TS-%232D79C7.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![ES6](https://img.shields.io/badge/ES6-%23F5DA55.svg?style=for-the-badge&logo=javascript&logoColor=black)
 
 ![statisdemo](media/demo.png)
