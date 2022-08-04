@@ -12,8 +12,9 @@ const App: React.FC = () => {
 
     // load todos and completed todos from localstorage
     useEffect(() => {
-        setTodos(JSON.parse(localStorage.getItem("todos") || '{[]}'));
-        setCompletedTodos(JSON.parse(localStorage.getItem("completedTodos") || '{[]}'));
+        document.title = 'Taskify';
+        setTodos(JSON.parse(localStorage.getItem("todos") || '{"":[]}'));
+        setCompletedTodos(JSON.parse(localStorage.getItem("completedTodos") || '{"":[]}'));
     }, []);
 
     // save todos and completed todos to localstorage everytime they are changed

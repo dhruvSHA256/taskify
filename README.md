@@ -10,6 +10,7 @@
 - using [React.js](reactjs.org)
 - add, delete, edit todos
 - mark completed todos 
+- persistent todos using browsers inbuilt localStorage api
 - Drag and Drop UI to easily add todos to completed todos
 
 

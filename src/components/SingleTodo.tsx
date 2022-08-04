@@ -44,6 +44,7 @@ const SingleTodo = ({
             ? setCompletedTodos(completedTodos.filter((t) => t.id !== id))
             : setTodos(todos.filter((t) => t.id !== id));
     };
+
     const handleEdit = (e: React.FormEvent, todo: Todo) => {
         e.preventDefault();
         !todo.isDone ? setTodos(
